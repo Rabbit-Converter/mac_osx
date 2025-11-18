@@ -1,0 +1,32 @@
+{
+  "source": "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/ContentView.swift",
+  "tables": {
+    "Localizable": [
+      {
+        "comment": "",
+        "key": "Copy %@ text to clipboard",
+        "location": {
+          "startingColumn": 23,
+          "startingLine": 131
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copied",
+        "location": {
+          "startingColumn": 42,
+          "startingLine": 117
+        }
+      },
+      {
+        "comment": "",
+        "key": "Copy",
+        "location": {
+          "startingColumn": 53,
+          "startingLine": 117
+        }
+      }
+    ]
+  },
+  "version": 1
+}

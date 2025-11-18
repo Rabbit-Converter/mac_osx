@@ -1,0 +1,12 @@
+{
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/ContentView.swift" : {
+    "abi-baseline-json" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit_Converter.abi.json",
+    "const-values" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit Converter-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit Converter-primary.d",
+    "diagnostics" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit Converter-primary.dia",
+    "objc-header" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h",
+    "swiftdoc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftdoc",
+    "swiftmodule" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule",
+    "swiftsourceinfo" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/DerivedData/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftsourceinfo"
+  }
+}

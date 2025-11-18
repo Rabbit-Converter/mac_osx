@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild:*)",
+      "Bash(clean:*)",
+      "Bash(CODE_SIGN_IDENTITY=\"\" )",
+      "Bash(CODE_SIGNING_REQUIRED=NO:*)",
+      "Bash(CODE_SIGNING_ALLOWED=NO)",
+      "Bash(echo:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
