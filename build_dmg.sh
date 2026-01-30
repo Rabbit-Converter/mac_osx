@@ -1,371 +1,310 @@
 #!/bin/bash
-# Creates a distributable DMG with a customized layout for macOS application distribution
+# Separate DMG Builder for macOS Applications
+# Builds separate ARM64 and Intel DMGs for optimal size
 #
 # Usage:
-#   ./dmg.sh [VERSION]
-#   SKIP_BUILD=true ./dmg.sh 1.0.0
-#   BUILD_OUTPUT_DIR=/path/to/app ./dmg.sh
+#   ./build-dmg.sh [VERSION]
+#
+# Environment Variables:
+#   VERSION         - Override version (default: auto-detect from Xcode)
+#   ARCH            - Build specific arch: "arm64", "x86_64", or "both" (default: both)
+#   APP_NAME        - Application name (default: Rabbit Converter)
 
 set -e
 set -o pipefail
 
-# Configuration
-readonly PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-readonly PROJECT_NAME="Rabbit Converter"
-readonly BUILD_DIR="${PROJECT_DIR}/dmg-build"
-readonly RELEASE_DIR="${PROJECT_DIR}/release"
+#==============================================================================
+# CONFIGURATION
+#==============================================================================
 
-# DMG appearance settings
-readonly DMG_WINDOW_WIDTH=500
-readonly DMG_WINDOW_HEIGHT=300
-readonly DMG_ICON_SIZE=72
-readonly DMG_APP_ICON_X=120
-readonly DMG_APP_ICON_Y=150
-readonly DMG_APPLICATIONS_ICON_X=380
-readonly DMG_APPLICATIONS_ICON_Y=150
+APP_NAME="${APP_NAME:-Rabbit Converter}"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DERIVED_DATA_DIR="${PROJECT_DIR}/Build"
+BUILD_DIR="${PROJECT_DIR}/dmg-temp"
+OUTPUT_DIR="${PROJECT_DIR}/release"
+ARCH="${ARCH:-both}"
 
-# Output helpers for user-friendly messages
-print_info() { echo "[INFO] $*"; }
-print_success() { echo "[SUCCESS] $*"; }
-print_error() { echo "[ERROR] $*" >&2; }
-print_warning() { echo "[WARNING] $*"; }
-print_step() { echo ""; echo "==> $*"; }
-print_detail() { echo "    $*"; }
+# DMG Configuration
+DMG_WINDOW_WIDTH=600
+DMG_WINDOW_HEIGHT=400
+DMG_ICON_SIZE=80
+DMG_TEXT_SIZE=12
 
-# Cleanup function for error handling
+#==============================================================================
+# UTILITY FUNCTIONS
+#==============================================================================
+
+log() {
+    echo "[$(date '+%H:%M:%S')] $*"
+}
+
+log_section() {
+    echo ""
+    echo "════════════════════════════════════════════════════════════════"
+    echo "  $*"
+    echo "════════════════════════════════════════════════════════════════"
+    echo ""
+}
+
+log_error() {
+    echo "[ERROR] $*" >&2
+}
+
+log_success() {
+    echo "[✓] $*"
+}
+
+die() {
+    log_error "$*"
+    exit 1
+}
+
 cleanup() {
-    local exit_code=$?
-    if [ $exit_code -ne 0 ]; then
-        echo ""
-        print_error "Something went wrong during DMG creation"
-        print_info "The script encountered an error and will now clean up"
-        if [ -d "$MOUNT_DIR" ] && mount | grep -q "$MOUNT_DIR"; then
-            print_info "Unmounting any mounted disk images..."
-            hdiutil detach "$MOUNT_DIR" 2>/dev/null || true
-        fi
-        echo ""
-        print_info "If the problem persists, try:"
-        print_detail "1. Run with SKIP_BUILD=true if the app is already built"
-        print_detail "2. Check that Xcode is properly configured"
-        print_detail "3. Ensure you have write permissions in this directory"
-        echo ""
+    if [ -d "$BUILD_DIR" ]; then
+        rm -rf "$BUILD_DIR"
     fi
-    return $exit_code
 }
 
 trap cleanup EXIT
 
-# Determine version
+#==============================================================================
+# VERSION DETECTION
+#==============================================================================
+
 get_version() {
     if [ -n "$1" ]; then
-        print_info "Using version from command line: $1" >&2
         echo "$1"
-    else
-        print_info "Extracting version from Xcode project..." >&2
-        local version
-        version=$(grep -A 1 "MARKETING_VERSION" "${PROJECT_DIR}/${PROJECT_NAME}.xcodeproj/project.pbxproj" | \
-                  grep -oE "[0-9]+\.[0-9]+(\.[0-9]+)?" | head -n 1)
-        
-        if [ -z "$version" ]; then
-            echo "" >&2
-            print_error "Could not automatically determine the version number"
-            print_info "The MARKETING_VERSION is not set in your Xcode project" >&2
-            echo "" >&2
-            print_info "You can fix this by either:" >&2
-            print_detail "1. Providing version as argument: $0 1.0.0" >&2
-            print_detail "2. Setting MARKETING_VERSION in Xcode project settings" >&2
-            echo "" >&2
-            exit 1
-        fi
-        print_success "Detected version: $version" >&2
-        echo "$version"
+        return
     fi
+    
+    if [ -n "$VERSION" ]; then
+        echo "$VERSION"
+        return
+    fi
+    
+    local project_file="${PROJECT_DIR}/${APP_NAME}.xcodeproj/project.pbxproj"
+    
+    if [ ! -f "$project_file" ]; then
+        die "Cannot find Xcode project at: $project_file"
+    fi
+    
+    local version=$(grep -m 1 "MARKETING_VERSION" "$project_file" | \
+                    sed -n 's/.*MARKETING_VERSION = \([0-9.]*\);/\1/p' | \
+                    tr -d ' ')
+    
+    if [ -z "$version" ]; then
+        die "Could not detect version. Set it in Xcode or pass as argument: $0 1.0.0"
+    fi
+    
+    echo "$version"
 }
 
-# Find built application
-find_app() {
-    print_info "Searching for built application..." >&2
+#==============================================================================
+# BUILD FOR SPECIFIC ARCHITECTURE
+#==============================================================================
+
+build_for_arch() {
+    local arch="$1"
+    local arch_name="$2"
     
-    if [ -n "$BUILD_OUTPUT_DIR" ] && [ -d "$BUILD_OUTPUT_DIR" ]; then
-        print_detail "Checking custom location: $BUILD_OUTPUT_DIR" >&2
-        if [ -d "$BUILD_OUTPUT_DIR/${PROJECT_NAME}.app" ]; then
-            print_success "Found application in custom location" >&2
-            print_detail "$BUILD_OUTPUT_DIR/${PROJECT_NAME}.app" >&2
-            echo "$BUILD_OUTPUT_DIR/${PROJECT_NAME}.app"
-            return 0
-        else
-            echo "" >&2
-            print_error "Application not found at specified location"
-            print_detail "Expected: $BUILD_OUTPUT_DIR/${PROJECT_NAME}.app" >&2
-            echo "" >&2
-            return 1
-        fi
+    log_section "Building for $arch_name ($arch)" >&2
+    
+    local project="${PROJECT_DIR}/${APP_NAME}.xcodeproj"
+    local output_dir="${DERIVED_DATA_DIR}/${arch}"
+    
+    if [ ! -d "$project" ]; then
+        die "Xcode project not found: $project"
     fi
     
-    local derived_data_name
-    derived_data_name=$(echo "${PROJECT_NAME}" | tr ' ' '_')
+    mkdir -p "$output_dir"
     
-    # First check local DerivedData (used by this script's build)
-    print_detail "Checking local DerivedData..." >&2
-    local app_path="${PROJECT_DIR}/DerivedData/Build/Products/Release/${PROJECT_NAME}.app"
+    log "Compiling $arch_name binary..." >&2
+    xcodebuild clean build \
+        -project "$project" \
+        -scheme "$APP_NAME" \
+        -configuration Release \
+        -arch "$arch" \
+        -derivedDataPath "$DERIVED_DATA_DIR" \
+        ONLY_ACTIVE_ARCH=NO \
+        CODE_SIGN_IDENTITY="" \
+        CODE_SIGNING_REQUIRED=NO \
+        CODE_SIGNING_ALLOWED=NO \
+        CONFIGURATION_BUILD_DIR="$output_dir" \
+        > "${DERIVED_DATA_DIR}/build-${arch}.log" 2>&1 || die "$arch_name build failed. Check ${DERIVED_DATA_DIR}/build-${arch}.log"
+    
+    local app_path="${output_dir}/${APP_NAME}.app"
     
     if [ ! -d "$app_path" ]; then
-        print_detail "Local Release build not found, trying Debug..." >&2
-        app_path="${PROJECT_DIR}/DerivedData/Build/Products/Debug/${PROJECT_NAME}.app"
+        die "Built app not found at: $app_path"
     fi
     
-    # If not found locally, search in Xcode's default DerivedData
-    if [ ! -d "$app_path" ]; then
-        print_detail "Searching in Xcode DerivedData..." >&2
-        # Try Release configuration first, then Debug as fallback
-        app_path=$(find ~/Library/Developer/Xcode/DerivedData/${derived_data_name}-*/Build/Products/Release \
-                        -name "${PROJECT_NAME}.app" -type d 2>/dev/null | head -n 1)
-
-        if [ -z "$app_path" ] || [ ! -d "$app_path" ]; then
-            print_detail "Release build not found, trying Debug configuration..." >&2
-            app_path=$(find ~/Library/Developer/Xcode/DerivedData/${derived_data_name}-*/Build/Products/Debug \
-                            -name "${PROJECT_NAME}.app" -type d 2>/dev/null | head -n 1)
-        fi
-    fi
+    # Get binary size
+    local binary_name=$(basename "$app_path" .app)
+    local binary_path="${app_path}/Contents/MacOS/${binary_name}"
+    local binary_size=$(du -h "$binary_path" | cut -f1)
     
-    if [ -z "$app_path" ] || [ ! -d "$app_path" ]; then
-        echo "" >&2
-        print_error "Could not locate the built application"
-        print_info "This usually means the app hasn't been built yet" >&2
-        echo "" >&2
-        print_info "Searched locations:" >&2
-        print_detail "${PROJECT_DIR}/DerivedData/Build/Products/Release" >&2
-        print_detail "${PROJECT_DIR}/DerivedData/Build/Products/Debug" >&2
-        print_detail "~/Library/Developer/Xcode/DerivedData/${derived_data_name}-*/Build/Products/Release" >&2
-        print_detail "~/Library/Developer/Xcode/DerivedData/${derived_data_name}-*/Build/Products/Debug" >&2
-        [ -n "$BUILD_OUTPUT_DIR" ] && print_detail "$BUILD_OUTPUT_DIR" >&2
-        echo "" >&2
-        print_info "To fix this:" >&2
-        print_detail "1. Build the app in Xcode first (Product > Build)" >&2
-        print_detail "2. Or let this script build it (remove SKIP_BUILD=true)" >&2
-        print_detail "3. Or specify BUILD_OUTPUT_DIR=/path/to/app" >&2
-        echo "" >&2
-        return 1
-    fi
+    log_success "$arch_name build complete (binary: $binary_size)" >&2
     
-    print_success "Found application in DerivedData" >&2
-    print_detail "$app_path" >&2
-    echo "$app_path"
+    printf '%s' "$app_path"
 }
 
-# Build the application
-build_app() {
-    if [ "$SKIP_BUILD" = "true" ]; then
-        print_warning "Skipping build step (SKIP_BUILD=true)"
-        print_detail "Will use existing built application"
-        return 0
-    fi
-    
-    print_step "Building ${PROJECT_NAME} for release"
-    print_info "This may take a few minutes..."
-    print_detail "Configuration: Release"
-    print_detail "Code signing: Disabled (for DMG distribution)"
-    
-    if xcodebuild -project "${PROJECT_DIR}/${PROJECT_NAME}.xcodeproj" \
-               -scheme "${PROJECT_NAME}" \
-               -configuration Release \
-               -derivedDataPath "${PROJECT_DIR}/DerivedData" \
-               clean build \
-               CODE_SIGN_IDENTITY="" \
-               CODE_SIGNING_REQUIRED=NO \
-               CODE_SIGNING_ALLOWED=NO 2>&1 | grep -E "error:|warning:|BUILD SUCCEEDED|BUILD FAILED"; then
-        print_success "Build completed successfully"
-    else
-        echo ""
-        print_error "Build failed"
-        print_info "Check the output above for details"
-        echo ""
-        exit 1
-    fi
-}
+#==============================================================================
+# CREATE DMG FOR ARCHITECTURE
+#==============================================================================
 
-# Prepare DMG staging directory
-prepare_staging() {
-    local app_path="$1"
+create_dmg_for_arch() {
+    local version="$1"
+    local app_path="$2"
+    local arch="$3"
+    local arch_label="$4"
     
-    print_step "Preparing DMG contents"
+    log_section "Creating DMG for $arch_label" >&2
     
-    if [ -d "$BUILD_DIR" ]; then
-        print_info "Cleaning previous staging area..."
-        rm -rf "$BUILD_DIR"
-    fi
+    local dmg_name="${APP_NAME}-${version}-${arch_label}"
+    local temp_dmg="${OUTPUT_DIR}/${dmg_name}-temp.dmg"
+    local final_dmg="${OUTPUT_DIR}/${dmg_name}.dmg"
     
-    if [ -d "$RELEASE_DIR" ]; then
-        print_info "Cleaning previous release directory..."
-        rm -rf "$RELEASE_DIR"
-    fi
-    
-    print_info "Creating staging directories..."
+    # Prepare staging directory
+    rm -rf "$BUILD_DIR"
     mkdir -p "$BUILD_DIR"
-    mkdir -p "$RELEASE_DIR"
+    mkdir -p "$OUTPUT_DIR"
     
-    print_info "Copying application bundle to staging area..."
-    print_detail "Source: $app_path"
-    print_detail "Destination: $BUILD_DIR/"
+    # Copy app to staging area
+    log "Preparing DMG contents..." >&2
+    cp -R "$app_path" "$BUILD_DIR/" || die "Failed to copy application"
     
-    if ! cp -R "$app_path" "$BUILD_DIR/"; then
-        echo ""
-        print_error "Failed to copy application bundle"
-        print_detail "Source: $app_path"
-        print_detail "Destination: $BUILD_DIR/"
-        echo ""
-        exit 1
-    fi
-    
-    print_info "Creating Applications folder shortcut..."
-    print_detail "This allows users to drag-and-drop to install"
+    # Create Applications symlink
     ln -s /Applications "$BUILD_DIR/Applications"
     
-    print_success "Staging area ready"
-}
-
-# Create and customize DMG
-create_dmg() {
-    local dmg_name="$1"
-    local temp_dmg="${RELEASE_DIR}/${dmg_name}-temp.dmg"
-    local final_dmg="${RELEASE_DIR}/${dmg_name}.dmg"
-    local mount_dir="/Volumes/${PROJECT_NAME}"
+    # Remove any existing DMG
+    [ -f "$final_dmg" ] && rm "$final_dmg"
+    [ -f "$temp_dmg" ] && rm "$temp_dmg"
     
-    print_step "Creating disk image" >&2
+    # Create temporary DMG
+    log "Creating disk image..." >&2
+    hdiutil create -volname "$APP_NAME" \
+                   -srcfolder "$BUILD_DIR" \
+                   -ov -format UDRW \
+                   "$temp_dmg" > /dev/null
     
-    if [ -f "$final_dmg" ]; then
-        print_warning "Removing existing DMG with same name..." >&2
-        rm "$final_dmg"
+    # Mount for customization
+    log "Customizing appearance..." >&2
+    local mount_point="/Volumes/$APP_NAME"
+    
+    # Unmount if already mounted
+    if [ -d "$mount_point" ]; then
+        hdiutil detach "$mount_point" 2>/dev/null || true
+        sleep 1
     fi
     
-    print_info "Creating temporary writable DMG..." >&2
-    print_detail "This will contain your app and the Applications shortcut" >&2
-    hdiutil create -volname "${PROJECT_NAME}" \
-                   -srcfolder "$BUILD_DIR" \
-                   -ov \
-                   -format UDRW \
-                   "$temp_dmg" >/dev/null
+    local device=$(hdiutil attach -readwrite -noverify -noautoopen "$temp_dmg" | \
+                   grep -E "^/dev/" | head -n 1 | awk '{print $1}')
     
-    print_info "Mounting DMG for customization..." >&2
-    hdiutil attach "$temp_dmg" -mountpoint "$mount_dir" -nobrowse >/dev/null
     sleep 2
     
-    print_info "Customizing DMG window appearance..." >&2
-    print_detail "Setting icon positions and window size" >&2
-    print_detail "Window size: ${DMG_WINDOW_WIDTH}x${DMG_WINDOW_HEIGHT}" >&2
-    print_detail "Icon size: ${DMG_ICON_SIZE}px" >&2
+    # Customize with AppleScript
+    /usr/bin/osascript <<-EOD > /dev/null 2>&1
+        tell application "Finder"
+            tell disk "$APP_NAME"
+                open
+                set current view of container window to icon view
+                set toolbar visible of container window to false
+                set statusbar visible of container window to false
+                set the bounds of container window to {100, 100, 700, 500}
+                set viewOptions to the icon view options of container window
+                set arrangement of viewOptions to not arranged
+                set icon size of viewOptions to $DMG_ICON_SIZE
+                set text size of viewOptions to $DMG_TEXT_SIZE
+                set position of item "${APP_NAME}.app" of container window to {150, 200}
+                set position of item "Applications" of container window to {450, 200}
+                close
+                open
+                update without registering applications
+                delay 2
+            end tell
+        end tell
+EOD
     
-    if osascript <<EOF >/dev/null 2>&1
-tell application "Finder"
-    tell disk "${PROJECT_NAME}"
-        open
-        set current view of container window to icon view
-        set toolbar visible of container window to false
-        set statusbar visible of container window to false
-        set the bounds of container window to {100, 100, $((100 + DMG_WINDOW_WIDTH)), $((100 + DMG_WINDOW_HEIGHT))}
-        set viewOptions to the icon view options of container window
-        set arrangement of viewOptions to not arranged
-        set icon size of viewOptions to ${DMG_ICON_SIZE}
-        set position of item "${PROJECT_NAME}.app" of container window to {${DMG_APP_ICON_X}, ${DMG_APP_ICON_Y}}
-        set position of item "Applications" of container window to {${DMG_APPLICATIONS_ICON_X}, ${DMG_APPLICATIONS_ICON_Y}}
-        update without registering applications
-        delay 2
-        close
-    end tell
-end tell
-EOF
-    then
-        print_success "DMG appearance customized" >&2
-    else
-        print_warning "Could not fully customize DMG appearance (non-critical)" >&2
-    fi
-    
+    sleep 2
     sync
     
-    print_info "Unmounting temporary DMG..." >&2
-    hdiutil detach "$mount_dir" >/dev/null
+    # Unmount using device
+    log "Finalizing..." >&2
+    hdiutil detach "$device" -force > /dev/null 2>&1 || {
+        sleep 2
+        hdiutil detach "$device" -force > /dev/null 2>&1 || true
+    }
     
-    print_info "Compressing to final read-only DMG..." >&2
-    print_detail "Using maximum compression (this may take a moment)" >&2
+    sleep 2
+    
+    # Convert to compressed read-only
     hdiutil convert "$temp_dmg" \
                     -format UDZO \
                     -imagekey zlib-level=9 \
-                    -o "$final_dmg" >/dev/null
+                    -o "$final_dmg" > /dev/null
     
-    print_info "Removing temporary files..." >&2
+    # Clean up temp DMG
     rm "$temp_dmg"
     
-    print_success "DMG creation complete" >&2
-    echo "$final_dmg"
+    # Get final size
+    local dmg_size=$(du -h "$final_dmg" | cut -f1)
+    
+    log_success "DMG created: $(basename "$final_dmg") ($dmg_size)" >&2
+    
+    printf '%s' "$final_dmg"
 }
 
-# Main execution
+#==============================================================================
+# MAIN
+#==============================================================================
+
 main() {
-    echo ""
-    echo "========================================"
-    echo "  Rabbit Converter DMG Builder"
-    echo "========================================"
-    echo ""
+    log_section "DMG Builder for $APP_NAME"
     
-    local version
-    version=$(get_version "$1")
+    # Get version
+    local version=$(get_version "$1")
+    log "Version: $version"
     
-    local dmg_name="${PROJECT_NAME}-${version}"
+    # Clean previous builds
+    if [ -d "$DERIVED_DATA_DIR" ]; then
+        log "Cleaning previous build data..."
+        rm -rf "$DERIVED_DATA_DIR"
+    fi
     
-    echo ""
-    print_info "Configuration:"
-    print_detail "Project: ${PROJECT_NAME}"
-    print_detail "Version: ${version}"
-    print_detail "Output: ${dmg_name}.dmg"
-    echo ""
+    mkdir -p "$OUTPUT_DIR"
     
-    build_app
+    local dmg_files=()
     
-    print_step "Locating built application"
-    local app_path
-    app_path=$(find_app)
-    print_detail "Path: $app_path"
+    # Build and create DMG for ARM64
+    if [ "$ARCH" = "both" ] || [ "$ARCH" = "arm64" ]; then
+        local arm_app=$(build_for_arch "arm64" "Apple Silicon")
+        local arm_dmg=$(create_dmg_for_arch "$version" "$arm_app" "arm64" "AppleSilicon")
+        dmg_files+=("$arm_dmg")
+    fi
     
-    prepare_staging "$app_path"
+    # Build and create DMG for Intel
+    if [ "$ARCH" = "both" ] || [ "$ARCH" = "x86_64" ]; then
+        local intel_app=$(build_for_arch "x86_64" "Intel")
+        local intel_dmg=$(create_dmg_for_arch "$version" "$intel_app" "x86_64" "Intel")
+        dmg_files+=("$intel_dmg")
+    fi
     
-    local final_dmg
-    final_dmg=$(create_dmg "$dmg_name")
+    log_section "Build Complete!"
     
-    print_step "Cleaning up temporary files"
-    print_info "Removing staging directory..."
-    rm -rf "$BUILD_DIR"
-    print_success "Cleanup complete"
-    
-    local dmg_size
-    dmg_size=$(du -h "$final_dmg" | cut -f1)
-    
+    echo "DMG installers created:"
     echo ""
-    echo "========================================"
-    print_success "DMG CREATED SUCCESSFULLY!"
-    echo "========================================"
+    for dmg in "${dmg_files[@]}"; do
+        local size=$(du -h "$dmg" | cut -f1)
+        echo "  • $(basename "$dmg") ($size)"
+    done
     echo ""
-    print_info "Your installer is ready:"
-    print_detail "Location: $final_dmg"
-    print_detail "Size: $dmg_size"
+    echo "Distribution:"
+    echo "  • AppleSilicon.dmg → For M1, M2, M3, M4 Macs (ARM64)"
+    echo "  • Intel.dmg        → For Intel-based Macs (x86_64)"
     echo ""
-    print_info "Next steps:"
+    echo "Users should download the version matching their Mac's processor."
     echo ""
-    echo "  To test the installer:"
-    print_detail "open '$final_dmg'"
-    echo ""
-    echo "  To distribute to users:"
-    print_detail "1. Upload the DMG to your website or cloud storage"
-    print_detail "2. Share the download link with users"
-    print_detail "3. Users will download, mount, and drag to Applications"
-    echo ""
-    echo "  Installation instructions for users:"
-    print_detail "1. Double-click the downloaded DMG file"
-    print_detail "2. Drag '${PROJECT_NAME}.app' to the Applications folder"
-    print_detail "3. Eject the disk image"
-    print_detail "4. Launch ${PROJECT_NAME} from Applications"
-    echo ""
-    print_success "All done! Your DMG is ready to distribute."
-    echo ""
+    log_success "All done!"
 }
 
 main "$@"
