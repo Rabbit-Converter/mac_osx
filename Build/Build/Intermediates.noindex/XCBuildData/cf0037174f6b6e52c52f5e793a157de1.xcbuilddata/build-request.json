@@ -1,0 +1,71 @@
+{
+  "buildCommand" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildOnly"
+  },
+  "configuredTargets" : [
+    {
+      "guid" : "1ea2b8832cfc323bbb0b390ceaf1e7806ca0d41a4699295c5e656db55e1e77da"
+    }
+  ],
+  "containerPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "dependencyScope" : "workspace",
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx26.0",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Products",
+      "derivedDataPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build",
+      "indexDataStoreFolderPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Index.noindex/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Index.noindex/PrecompiledHeaders",
+      "pchPath" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Release",
+    "overrides" : {
+      "commandLine" : {
+        "table" : {
+          "ARCHS" : "x86_64",
+          "CODE_SIGN_IDENTITY" : "",
+          "CODE_SIGNING_ALLOWED" : "NO",
+          "CODE_SIGNING_REQUIRED" : "NO",
+          "CONFIGURATION_BUILD_DIR" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/x86_64",
+          "ONLY_ACTIVE_ARCH" : "NO"
+        }
+      },
+      "synthesized" : {
+        "table" : {
+          "ACTION" : "build",
+          "CLANG_COVERAGE_MAPPING" : "YES",
+          "CLANG_PROFILE_DATA_DIRECTORY" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/ProfileData",
+          "ENABLE_PREVIEWS" : "NO",
+          "ENABLE_XOJIT_PREVIEWS" : "YES",
+          "ONLY_ACTIVE_ARCH" : "YES"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

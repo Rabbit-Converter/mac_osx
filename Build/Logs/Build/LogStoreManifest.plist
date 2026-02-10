@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>11</integer>
+	<key>logs</key>
+	<dict>
+		<key>C423636B-2141-4937-B443-6222F998D648</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>C423636B-2141-4937-B443-6222F998D648.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rabbit Converter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rabbit Converter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project Rabbit Converter with scheme Rabbit Converter and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>792453271.40101898</real>
+			<key>timeStoppedRecording</key>
+			<real>792453271.709916</real>
+			<key>title</key>
+			<string>Cleaning project Rabbit Converter with scheme Rabbit Converter and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>C423636B-2141-4937-B443-6222F998D648</string>
+		</dict>
+		<key>E8E2E67B-C3F2-4BF4-A497-B1FBC1B11E2C</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>E8E2E67B-C3F2-4BF4-A497-B1FBC1B11E2C.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Rabbit Converter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Rabbit Converter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project Rabbit Converter with scheme Rabbit Converter and configuration Release</string>
+			<key>timeStartedRecording</key>
+			<real>792453297.95053899</real>
+			<key>timeStoppedRecording</key>
+			<real>792453298.30640304</real>
+			<key>title</key>
+			<string>Cleaning project Rabbit Converter with scheme Rabbit Converter and configuration Release</string>
+			<key>uniqueIdentifier</key>
+			<string>E8E2E67B-C3F2-4BF4-A497-B1FBC1B11E2C</string>
+		</dict>
+	</dict>
+</dict>
+</plist>

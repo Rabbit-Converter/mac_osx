@@ -1,0 +1,400 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild clean build -project "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter.xcodeproj" -scheme "Rabbit Converter" -configuration Release -arch arm64 -derivedDataPath /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build ONLY_ACTIVE_ARCH=NO CODE_SIGN_IDENTITY= CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO CONFIGURATION_BUILD_DIR=/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64
+
+Build settings from command line:
+    ARCHS = arm64
+    CODE_SIGN_IDENTITY = 
+    CODE_SIGNING_ALLOWED = NO
+    CODE_SIGNING_REQUIRED = NO
+    CONFIGURATION_BUILD_DIR = /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64
+    ONLY_ACTIVE_ARCH = NO
+
+2026-02-10 15:54:31.384 xcodebuild[50819:790499] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00006000-001C70291ED8801E, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00006000-001C70291ED8801E, name:My Mac }
+{ platform:macOS, name:Any Mac }
+note: Using codesigning identity override: 
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+** CLEAN SUCCEEDED **
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00006000-001C70291ED8801E, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00006000-001C70291ED8801E, name:My Mac }
+{ platform:macOS, name:Any Mac }
+note: Using codesigning identity override: 
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (1 target)
+    Target 'Rabbit Converter' in project 'Rabbit Converter' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 1ee13b17ae4dcfbc10dd6e51e630c5dd
+Build description path: /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/XCBuildData/1ee13b17ae4dcfbc10dd6e51e630c5dd.xcbuilddata
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Products
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Products
+
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64
+
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/SDKStatCaches.noindex/macosx26.0-25A352-28806144b0707e398aac92880fa50324.sdkstatcache
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -o /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/SDKStatCaches.noindex/macosx26.0-25A352-28806144b0707e398aac92880fa50324.sdkstatcache
+
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Release
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    builtin-create-build-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Release
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter-1ea2b8832cfc323bbb0b390ceaf1e780-VFS/all-product-headers.yaml
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter.xcodeproj
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter-1ea2b8832cfc323bbb0b390ceaf1e780-VFS/all-product-headers.yaml
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyMetadataFileList (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-project-headers.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-project-headers.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyStaticMetadataFileList (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-own-target-headers.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-own-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-generated-files.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-generated-files.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-target-headers.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-non-framework-target-headers.hmap (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_const_extract_protocols.json (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_const_extract_protocols.json
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter-OutputFileMap.json (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter-OutputFileMap.json
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftConstValuesFileList (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.LinkFileList (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    write-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.LinkFileList
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app
+
+CpResource /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources/Zawgyi-One.ttf /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Zawgyi-One.ttf (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Zawgyi-One.ttf /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/unthinned (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/unthinned
+
+MkDir /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/thinned (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /bin/mkdir -p /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Assets.xcassets /Volumes/X9_2TB/Github/Rabbit_MacOSX/RabbitAppIcon.icon (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Assets.xcassets /Volumes/X9_2TB/Github/Rabbit_MacOSX/RabbitAppIcon.icon --compile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources --output-format human-readable-text --notices --warnings --export-dependency-info /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_dependencies --output-partial-info-plist /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist --app-icon RabbitAppIcon --accent-color AccentColor --enable-on-demand-resources NO --development-region en --target-device mac --minimum-deployment-target 14.6 --platform macosx --bundle-identifier com.comquas.Rabbit-Converter --generate-swift-asset-symbols /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/DerivedSources/GeneratedAssetSymbols.h
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CompileAssetCatalogVariant thinned /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Assets.xcassets /Volumes/X9_2TB/Github/Rabbit_MacOSX/RabbitAppIcon.icon (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /Applications/Xcode.app/Contents/Developer/usr/bin/actool /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Assets.xcassets /Volumes/X9_2TB/Github/Rabbit_MacOSX/RabbitAppIcon.icon --compile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist_thinned --app-icon RabbitAppIcon --accent-color AccentColor --enable-on-demand-resources NO --development-region en --target-device mac --minimum-deployment-target 14.6 --platform macosx
+/* com.apple.actool.compilation-results */
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/assetcatalog_generated_info.plist_thinned
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/assetcatalog_output/thinned/Assets.car
+/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/assetcatalog_output/thinned/RabbitAppIcon.icns
+
+
+SwiftDriver Rabbit\ Converter normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-SwiftDriver -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Rabbit_Converter -O -whole-module-optimization -enforce-exclusivity\=checked @/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos14.6 -g -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -swift-version 5 -I /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -F /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -emit-localized-strings -emit-localized-strings-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64 -c -num-threads 10 -Xcc -ivfsstatcache -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/SDKStatCaches.noindex/macosx26.0-25A352-28806144b0707e398aac92880fa50324.sdkstatcache -output-file-map /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -sdk-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-generated-files.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-own-target-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-project-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/include -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources -emit-objc-header -emit-objc-header-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h -working-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX -no-emit-module-separately-wmo
+
+LinkAssetCatalog /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Assets.xcassets /Volumes/X9_2TB/Github/Rabbit_MacOSX/RabbitAppIcon.icon (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-linkAssetCatalog --thinned /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/thinned --thinned-dependencies /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist_thinned --unthinned /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_output/unthinned --unthinned-dependencies /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist_unthinned --output /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources --plist-output /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist
+note: Emplaced /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit Converter.app/Contents/Resources/Assets.car (in target 'Rabbit Converter' from project 'Rabbit Converter')
+note: Emplaced /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit Converter.app/Contents/Resources/RabbitAppIcon.icns (in target 'Rabbit Converter' from project 'Rabbit Converter')
+
+ProcessInfoPlistFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Info.plist /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit-Converter-Info.plist (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-infoPlistUtility /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit-Converter-Info.plist -producttype com.apple.product-type.application -genpkginfo /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/PkgInfo -expandbuildsettings -platform macosx -additionalcontentfile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/assetcatalog_generated_info.plist -o /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Info.plist
+
+SwiftDriver\ Compilation Rabbit\ Converter normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-Swift-Compilation -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Rabbit_Converter -O -whole-module-optimization -enforce-exclusivity\=checked @/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos14.6 -g -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -swift-version 5 -I /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -F /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -emit-localized-strings -emit-localized-strings-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64 -c -num-threads 10 -Xcc -ivfsstatcache -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/SDKStatCaches.noindex/macosx26.0-25A352-28806144b0707e398aac92880fa50324.sdkstatcache -output-file-map /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -sdk-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-generated-files.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-own-target-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-project-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/include -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources -emit-objc-header -emit-objc-header-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h -working-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX -no-emit-module-separately-wmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_float-D24M6Z8M010W1S6YCG0GS3NZY.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftShims-8BNO9909TWAFZKRNLWQ37SVHP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DeveloperToolsSupport-E1ZY94SQUEL4X6GDXHUHG7NCP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdbool-6JMGXYW4YXH43II942HN1L6MX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_AvailabilityInternal-3GX6IU8OEU1JQZTM6ACVLBL1F.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ptrcheck-5EMY5PCQIYKFOB3A3YOA5DDY1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_SwiftConcurrencyShims-1OC8I1Z6KI00M5RBIL7JPN73U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stddef-5ZANAPVU4JGRF894CWV7QQ58Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ptrauth-ANPTVUM29BTYQ09KJL4BDUSUR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdarg-97HEFY2P0QU5J8NCIOVSELMWS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation1-CBFYIUOXDS0GPBB64MVI1FLJZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_limits-E3XSZ8IQAZPLVFC33IUH6T56D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation2-4N4TGKTY3CA8JFJCFKH13Y7PZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdint-EMKR5MLG5FZH4LNHJNYGNQHHM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_tgmath-232NVXD2JAE0UJSMWX4L64J4S.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/sys_types-E0U1FM4KBCBMXIJ39N08AS5J4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/OpenGL-EDKXGEVKEUA82NBJJ03U9GFZZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_intrinsics-3WRPYC9Y7EZETNSZOA6F96IR7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation3-6ISLLLI2T878VT70C7TACGZOP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/libDER-9C2ID1VAUDE5W6IQQ3Q4X1I50.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdatomic-AUGNHSVOX33VBXWY7ZNZFKB8P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_inttypes-AEAG4VSSF04ELHLO0RGLK88RH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Darwin-7SA1CLYOH8O9OYQ7VKIR5S9G3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/simd-4RKO3JPIVH8TXP3JXEXMDF877.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/MachO-E1YBP46HWPE1O3WZWINIIF3Z0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CUPS-6DUNV5EXRJVTBCKH88QDYQ8AH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/libkern-EAFRZ03T7PVG4FQ6735VEB448.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/launch-3E7QH97Z44V24TLLD59ZA0MN5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ObjectiveC-55KM4UKJAT6YIYTD64936231J.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Spatial-1ZBTBTV62XQOCP2RUDOU3RU9U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os_object-27KCHCHEHUQC9SM9UMMMBMTV8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os_workgroup-6D7AGV1K5JDEWGNI96PPNPNS4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Dispatch-261QXAO5VB7VF7OV9H4GL10RM.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreFoundation-2B27BHD3FT5U2UL62QVM1Q2KK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/XPC-90WTHAXKUB63CWRW1D5PHJH6E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os-EL22SGG2JF7OGRCNXG0221ETZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/IOKit-BK913V2XT0EDDO3UKCSYLSTBB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CFNetwork-1RBMGRHBM8F5CWK1905J5P6T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Security-5NLMK9AM0QLRAYFLJYRX89MRQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ColorSync-45KKMQ5N1OS5DZCUL3L0MGJQ4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreGraphics-67HYBP63O6C8LF7YQX3Q42ZOC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DiskArbitration-C8PTAGCM6YIQQ2EMJT7OHF9AA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreServices-3KBNFX8H8D2SCZ0AHGUNHRN48.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ImageIO-98U9LOCQF7BJRT8PPSE85CL1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreText-9G3THXIKP7AXXLZSTBVAABYW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Foundation-47I1G953FDXF6U7QY9WKNHY3U.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/UniformTypeIdentifiers-8KZDEBZGNE7ZV3GIG007VG6KG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreTransferable-EVIF03SY1GS1WIHU25F6RN6WF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Accessibility-2VCNMAYT9M4ZVW16V2NX3MCUS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreData-8B53ZGK2RX82UQWOGTSEU1S1E.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Symbols-6VU1MY0TK3B20DYA2F8E59QOW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DataDetection-2TGSWGB7295H8K2HVIH3L32QN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/OSLog-5SGI9JV7U3WHQW2AHZZOR4F0W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ApplicationServices-5HEB0I33EL67LJXR3R8NQVKDC.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/IOSurface-3PMLELCK47ABWZLR44NZDRH39.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Metal-A27KZFO8ORSX8E3ZV6EUXXGHA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreVideo-ASFW8994E17NVQYYQFY1CBWLA.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/QuartzCore-C0JQOBSR404U7ET854Y7TQO2D.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreImage-5YIMUYQYE2RAUP7YEDS9P4O9V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftUICore-15B0LKW49FB5VNN7FCWYPEBMI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/AppKit-62HA8JXI737GO84VYQ3Q5VDZE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftUI-2097B9ZEFP3MYJOXLAXU6AFFD.pcm
+
+SwiftCompile normal arm64 Compiling\ ContentView.swift,\ FileConverter.swift,\ Rabbit.swift,\ Rabbit_ConverterApp.swift,\ GeneratedAssetSymbols.swift /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/ContentView.swift /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/FileConverter.swift /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Rabbit.swift /Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit\ Converter/Rabbit_ConverterApp.swift /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/GeneratedAssetSymbols.swift /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/DeveloperToolsSupport.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_DarwinFoundation2.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreTransferable.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Accessibility.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_Concurrency.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreText.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Dispatch.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_DarwinFoundation1.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Observation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/XPC.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/SwiftUICore.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/DataDetection.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Metal.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_DarwinFoundation3.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/QuartzCore.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Symbols.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreGraphics.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/AppKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_Builtin_float.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/ObjectiveC.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Foundation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/os.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/SwiftUI.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/System.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreData.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreFoundation.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/_StringProcessing.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreImage.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Swift.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Spatial.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Darwin.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/IOKit.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/OSLog.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/Combine.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/simd.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/UniformTypeIdentifiers.swiftmodule/arm64e-apple-macos.swiftmodule /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/prebuilt-modules/26.0/CoreVideo.swiftmodule/arm64e-apple-macos.swiftmodule /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_tgmath-232NVXD2JAE0UJSMWX4L64J4S.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ColorSync-45KKMQ5N1OS5DZCUL3L0MGJQ4.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_float-D24M6Z8M010W1S6YCG0GS3NZY.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreVideo-ASFW8994E17NVQYYQFY1CBWLA.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_SwiftConcurrencyShims-1OC8I1Z6KI00M5RBIL7JPN73U.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stddef-5ZANAPVU4JGRF894CWV7QQ58Q.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdbool-6JMGXYW4YXH43II942HN1L6MX.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Symbols-6VU1MY0TK3B20DYA2F8E59QOW.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdatomic-AUGNHSVOX33VBXWY7ZNZFKB8P.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation2-4N4TGKTY3CA8JFJCFKH13Y7PZ.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_intrinsics-3WRPYC9Y7EZETNSZOA6F96IR7.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/sys_types-E0U1FM4KBCBMXIJ39N08AS5J4.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_inttypes-AEAG4VSSF04ELHLO0RGLK88RH.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_limits-E3XSZ8IQAZPLVFC33IUH6T56D.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Darwin-7SA1CLYOH8O9OYQ7VKIR5S9G3.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftUI-2097B9ZEFP3MYJOXLAXU6AFFD.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreFoundation-2B27BHD3FT5U2UL62QVM1Q2KK.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/XPC-90WTHAXKUB63CWRW1D5PHJH6E.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/UniformTypeIdentifiers-8KZDEBZGNE7ZV3GIG007VG6KG.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os_object-27KCHCHEHUQC9SM9UMMMBMTV8.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/simd-4RKO3JPIVH8TXP3JXEXMDF877.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Metal-A27KZFO8ORSX8E3ZV6EUXXGHA.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/MachO-E1YBP46HWPE1O3WZWINIIF3Z0.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/AppKit-62HA8JXI737GO84VYQ3Q5VDZE.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation1-CBFYIUOXDS0GPBB64MVI1FLJZ.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftShims-8BNO9909TWAFZKRNLWQ37SVHP.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DeveloperToolsSupport-E1ZY94SQUEL4X6GDXHUHG7NCP.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CUPS-6DUNV5EXRJVTBCKH88QDYQ8AH.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os_workgroup-6D7AGV1K5JDEWGNI96PPNPNS4.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdint-EMKR5MLG5FZH4LNHJNYGNQHHM.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CFNetwork-1RBMGRHBM8F5CWK1905J5P6T.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ApplicationServices-5HEB0I33EL67LJXR3R8NQVKDC.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ptrauth-ANPTVUM29BTYQ09KJL4BDUSUR.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DataDetection-2TGSWGB7295H8K2HVIH3L32QN.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/DiskArbitration-C8PTAGCM6YIQQ2EMJT7OHF9AA.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Security-5NLMK9AM0QLRAYFLJYRX89MRQ.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/OSLog-5SGI9JV7U3WHQW2AHZZOR4F0W.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_DarwinFoundation3-6ISLLLI2T878VT70C7TACGZOP.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ptrcheck-5EMY5PCQIYKFOB3A3YOA5DDY1.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/libkern-EAFRZ03T7PVG4FQ6735VEB448.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/libDER-9C2ID1VAUDE5W6IQQ3Q4X1I50.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_AvailabilityInternal-3GX6IU8OEU1JQZTM6ACVLBL1F.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/SwiftUICore-15B0LKW49FB5VNN7FCWYPEBMI.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ObjectiveC-55KM4UKJAT6YIYTD64936231J.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/QuartzCore-C0JQOBSR404U7ET854Y7TQO2D.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/_Builtin_stdarg-97HEFY2P0QU5J8NCIOVSELMWS.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreServices-3KBNFX8H8D2SCZ0AHGUNHRN48.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/launch-3E7QH97Z44V24TLLD59ZA0MN5.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Dispatch-261QXAO5VB7VF7OV9H4GL10RM.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Spatial-1ZBTBTV62XQOCP2RUDOU3RU9U.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreData-8B53ZGK2RX82UQWOGTSEU1S1E.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/ImageIO-98U9LOCQF7BJRT8PPSE85CL1.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreText-9G3THXIKP7AXXLZSTBVAABYW.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreImage-5YIMUYQYE2RAUP7YEDS9P4O9V.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Accessibility-2VCNMAYT9M4ZVW16V2NX3MCUS.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/IOSurface-3PMLELCK47ABWZLR44NZDRH39.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/OpenGL-EDKXGEVKEUA82NBJJ03U9GFZZ.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/os-EL22SGG2JF7OGRCNXG0221ETZ.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/IOKit-BK913V2XT0EDDO3UKCSYLSTBB.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Foundation-47I1G953FDXF6U7QY9WKNHY3U.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreGraphics-67HYBP63O6C8LF7YQX3Q42ZOC.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/CoreTransferable-EVIF03SY1GS1WIHU25F6RN6WF.pcm /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-dependencies-1.json (in target 'Rabbit Converter' from project 'Rabbit Converter')
+
+CompileSwift normal arm64 (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    
+
+SwiftDriverJobDiscovery normal arm64 Compiling ContentView.swift, FileConverter.swift, Rabbit.swift, Rabbit_ConverterApp.swift, GeneratedAssetSymbols.swift (in target 'Rabbit Converter' from project 'Rabbit Converter')
+
+SwiftDriver\ Compilation\ Requirements Rabbit\ Converter normal arm64 com.apple.xcode.tools.swift.compiler (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name Rabbit_Converter -O -whole-module-optimization -enforce-exclusivity\=checked @/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList -default-isolation\=MainActor -enable-bare-slash-regex -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -target arm64-apple-macos14.6 -g -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -Xfrontend -serialize-debugging-options -profile-coverage-mapping -profile-generate -swift-version 5 -I /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -F /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -emit-localized-strings -emit-localized-strings-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64 -c -num-threads 10 -Xcc -ivfsstatcache -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/SDKStatCaches.noindex/macosx26.0-25A352-28806144b0707e398aac92880fa50324.sdkstatcache -output-file-map /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -sdk-module-cache-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule -validate-clang-modules-once -clang-build-session-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_const_extract_protocols.json -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-generated-files.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-own-target-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-all-target-headers.hmap -Xcc -iquote -Xcc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter-project-headers.hmap -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/include -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources-normal/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/arm64 -Xcc -I/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources -emit-objc-header -emit-objc-header-path /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h -working-directory /Volumes/X9_2TB/Github/Rabbit_MacOSX -no-emit-module-separately-wmo
+
+SwiftMergeGeneratedHeaders /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/Rabbit_Converter-Swift.h /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-swiftHeaderTool -arch arm64 /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-Swift.h -o /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/DerivedSources/Rabbit_Converter-Swift.h
+
+Copy /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.swiftdoc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftdoc (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftdoc /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.swiftdoc
+
+Copy /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.abi.json /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.abi.json (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.abi.json /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.abi.json
+
+Copy /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.swiftmodule /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/arm64-apple-macos.swiftmodule
+
+Copy /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftsourceinfo (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftsourceinfo /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit_Converter.swiftmodule/Project/arm64-apple-macos.swiftsourceinfo
+
+Ld /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter normal (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.6 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk -Os -L/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Release -L/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -F/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/EagerLinkingTBDs/Release -F/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64 -filelist /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/../Frameworks -Xlinker -object_path_lto -Xlinker /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_lto.o -Xlinker -debug_variant -Xlinker -dependency_info -Xlinker /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_dependency_info.dat -fobjc-link-runtime -fprofile-instr-generate -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter.swiftmodule @/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit_Converter-linker-args.resp -o /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter
+
+CopySwiftLibs /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter --scan-folder /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Frameworks --scan-folder /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/PlugIns --scan-folder /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Library/SystemExtensions --scan-folder /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name Rabbit_Converter --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk --xcode-version 17A324 --platform-family macOS --deployment-target 14.6 --bundle-identifier com.comquas.Rabbit-Converter --output /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/Resources --target-triple arm64-apple-macos14.6 --binary-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter --dependency-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter_dependency_info.dat --stringsdata-file /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftFileList --metadata-file-list /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyMetadataFileList --static-metadata-file-list /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Rabbit\ Converter.DependencyStaticMetadataFileList --swift-const-vals-list /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit\ Converter.build/Release/Rabbit\ Converter.build/Objects-normal/arm64/Rabbit\ Converter.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-02-10 15:54:40.171 appintentsmetadataprocessor[50935:791379] Starting appintentsmetadataprocessor export
+2026-02-10 15:54:40.173 appintentsmetadataprocessor[50935:791379] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+GenerateDSYMFile /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app.dSYM /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app/Contents/MacOS/Rabbit\ Converter -o /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app.dSYM
+
+RegisterExecutionPolicyException /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-RegisterExecutionPolicyException /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app
+
+Validate /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    builtin-validationUtility /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+Touch /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /usr/bin/touch -c /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app
+
+RegisterWithLaunchServices /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app (in target 'Rabbit Converter' from project 'Rabbit Converter')
+    cd /Volumes/X9_2TB/Github/Rabbit_MacOSX
+    /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/arm64/Rabbit\ Converter.app
+
+** BUILD SUCCEEDED **
+

@@ -1,0 +1,36 @@
+{
+  "" : {
+    "const-values" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary.swiftconstvalues",
+    "dependencies" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary.d",
+    "diagnostics" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary.dia",
+    "emit-module-dependencies" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary-emit-module.dia",
+    "pch" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit Converter-primary.swiftdeps"
+  },
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/GeneratedAssetSymbols.bc",
+    "object" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/GeneratedAssetSymbols.o"
+  },
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/ContentView.swift" : {
+    "index-unit-output-path" : "/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/ContentView.o",
+    "llvm-bc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/ContentView.bc",
+    "object" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/ContentView.o"
+  },
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/FileConverter.swift" : {
+    "index-unit-output-path" : "/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/FileConverter.o",
+    "llvm-bc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/FileConverter.bc",
+    "object" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/FileConverter.o"
+  },
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/Rabbit.swift" : {
+    "index-unit-output-path" : "/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit.o",
+    "llvm-bc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit.bc",
+    "object" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit.o"
+  },
+  "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Rabbit Converter/Rabbit_ConverterApp.swift" : {
+    "index-unit-output-path" : "/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit_ConverterApp.o",
+    "llvm-bc" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit_ConverterApp.bc",
+    "object" : "/Volumes/X9_2TB/Github/Rabbit_MacOSX/Build/Build/Intermediates.noindex/Rabbit Converter.build/Release/Rabbit Converter.build/Objects-normal/x86_64/Rabbit_ConverterApp.o"
+  }
+}

@@ -172,6 +172,13 @@ struct CustomTextEditor: NSViewRepresentable {
         textView.textColor = .textColor
         textView.backgroundColor = .textBackgroundColor
         textView.drawsBackground = true
+
+        // Ensure document view resizes vertically so scrolling keeps working after edits.
+        textView.isVerticallyResizable = true
+        textView.isHorizontallyResizable = false
+        textView.autoresizingMask = [.width]
+        textView.textContainer?.widthTracksTextView = true
+        textView.textContainer?.containerSize = NSSize(width: 0, height: CGFloat.greatestFiniteMagnitude)
         
         // Disable smart substitutions to prevent interference with Myanmar text encoding
         // Smart quotes and dashes can corrupt Zawgyi/Unicode character sequences
